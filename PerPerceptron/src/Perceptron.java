@@ -31,7 +31,7 @@ public class Perceptron {
 
                 //printa a coluna com os valores corretos
                 System.out.print("Entradas: ");
-                for (int j = 0; j < 4; j++) {
+                for (int j = 0; j < entradas[0].length; j++) {
                     System.out.print(" " + entradas[i][j]);
                 }
                 System.out.println(" Saída esperada: " + saidas[i] + " Saída obtida: " + saida);
@@ -41,7 +41,7 @@ public class Perceptron {
     }
 
     public void calcularPesos(int p, int erro) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < pesos.length; i++) {
             pesos[i] = (int) (pesos[i] + aprendizagem * erro * entradas[i][i]);
             //System.out.println("novo peso " + i + " = " + (pesos[i] + aprendizagem * erro * entradas[i][i]));
         }
@@ -51,7 +51,7 @@ public class Perceptron {
     public int ativacao(int indice) {
         //variável para armazenar o somatório
         int soma = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < pesos.length; i++) {
             soma += (pesos[i] * entradas[indice][i]);
         }
         /**

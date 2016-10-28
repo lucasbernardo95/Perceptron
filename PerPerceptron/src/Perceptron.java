@@ -1,6 +1,6 @@
 
 /**
- * @author lber
+ * @author lber 28/10/16
  */
 public class Perceptron {
 
